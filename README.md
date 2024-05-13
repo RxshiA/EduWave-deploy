@@ -45,7 +45,7 @@ Replace `<your-email-address>`, `<your-email-password>`, and `<your-db-url>` wit
 Access the secrets folder on terminal and and enter 
 
 ```bash
-kubectl apply -f jwt-secret.yml`
+kubectl apply -f jwt-secret.yml
 ```
 
 Remember to create all required secrets before deploying your services.
