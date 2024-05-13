@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-gateway
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-gateway
+  template:
+    metadata:
+      labels:
+        app: api-gateway
+    spec:
+      containers:
+      - name: api-gateway
+        image: rxshi01/api-gateway:latest
+        ports:
+        - containerPort: 3000
+        env:
+        - name: DB_URL
+          valueFrom:
+            secretKeyRef:
+              name: db-credentials
+              key: url
