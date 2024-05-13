@@ -40,7 +40,13 @@ kubectl create secret generic email-credentials --from-literal=address=<your-ema
 kubectl create secret generic db-credentials --from-literal=url=<your-db-url>
 ```
 
-Replace <your-email-address>, <your-email-password>, and <your-db-url> with your actual values.
+Replace `<your-email-address>`, `<your-email-password>`, and `<your-db-url>` with your actual values.
+
+Access the secrets folder on terminal and and enter 
+
+```bash
+kubectl apply -f jwt-secret.yml`
+```
 
 Remember to create all required secrets before deploying your services.
 
