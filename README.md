@@ -48,6 +48,12 @@ Access the secrets folder on terminal and and enter
 kubectl apply -f jwt-secret.yml
 ```
 
+And
+
+```bash
+kubectl apply -f notification-secrets.yml
+```
+
 Remember to create all required secrets before deploying your services.
 
 ## Running the Application
